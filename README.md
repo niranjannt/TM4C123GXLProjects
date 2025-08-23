@@ -44,7 +44,7 @@ Switch-based user input detection
 
 LCD result display: "Reaction Time: XXX ms"
 
-📷 Example Workflow
+ Example Workflow
 
 After a random delay, an LED lights up.
 
@@ -67,7 +67,7 @@ Tick sound generated with SysTick + DAC
 
 LCD updates dynamically with the current stopwatch value
 
-📷 Example Workflow
+ Example Workflow
 
 Press Start to begin timing.
 
@@ -77,7 +77,7 @@ Press Reset to clear the stopwatch.
 
 LCD continuously updates with elapsed time.
 
-🛠️ Hardware Components
+Hardware Components
 
 TM4C123GXL Tiva C Series LaunchPad
 
