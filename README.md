@@ -134,4 +134,4 @@ This project is provided for educational and personal use.
 
 ---
 
-🛠 These were summer passion projects using **Code Composer Studio** and the **TM4C123GXL Tiva C LaunchPad**.
+🛠 These were summer passion projects developed using **Code Composer Studio** and the **TM4C123GXL Tiva C LaunchPad**.
