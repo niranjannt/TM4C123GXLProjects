@@ -32,7 +32,7 @@ A memory-based game inspired by *Simon Says*, where the player replicates increa
 <details>
 <summary><b>⚡ LED Reaction Time Game</b></summary>
 
-A simple game that measures how quickly the player reacts to a randomly lit LED. Reaction times are displayed on the LCD in milliseconds.
+A game that measures how quickly the player reacts to a randomly lit LED. Reaction times are displayed on the LCD in milliseconds.
 
 ### ✨ Features
 - Random LED activation with **SysTick**  
@@ -69,6 +69,27 @@ A digital stopwatch with start, stop, and reset controls, displaying elapsed tim
 
 ---
 
+<details>
+<summary><b>🕒 LCD Digital Clock</b></summary>
+
+A real-time digital clock displayed on the ST7735 LCD, capable of showing time in **12-hour AM/PM** format with manual adjustment.
+
+### ✨ Features
+- Real-time tracking using **SysTick**  
+- LCD display in **HH:MM:SS AM/PM** format  
+- Manual **time setting controls** via GPIO switches  
+- AM/PM toggle functionality  
+- Periodic tick sound using **DAC output**
+
+### 🕹️ Example Workflow
+1. Clock updates continuously every second.  
+2. Use buttons to adjust **hours**, **minutes**, or **toggle AM/PM**.  
+3. LCD reflects all changes in real time.
+
+</details>
+
+---
+
 ## 🔩 Hardware Components  
 
 | Component | Description |
@@ -90,7 +111,7 @@ A digital stopwatch with start, stop, and reset controls, displaying elapsed tim
 
 **🚀 Getting Started**
 1. Clone this repository.  
-2. Open the project in Code Composer Studio.  
+2. Open the desired project in Code Composer Studio.  
 3. Connect the TM4C123GXL via USB.  
 4. Build and flash the program.  
 5. Interact using the switches and LCD display.
@@ -104,13 +125,13 @@ A digital stopwatch with start, stop, and reset controls, displaying elapsed tim
 | **Simon Says** | Add difficulty scaling and high-score tracking |
 | **Reaction Game** | Support multiple rounds with average time scoring |
 | **Stopwatch** | Add lap-time tracking functionality |
+| **LCD Clock** | Add alarm feature and 24-hour time option |
 
 ---
 
 ## 🧾 License  
 This project is provided for educational and personal use.  
-See `LICENSE` for more information (if applicable).
 
 ---
 
-🛠 Developed with passion using **Code Composer Studio** and the **TM4C123GXL Tiva C LaunchPad**.
+🛠 These were summer passion projects using **Code Composer Studio** and the **TM4C123GXL Tiva C LaunchPad**.
