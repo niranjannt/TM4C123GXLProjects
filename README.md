@@ -1,141 +1,116 @@
-TM4C123GXL Embedded Systems Projects
+# ⚙️ TM4C123GXL Embedded Systems Projects  
 
-This repository showcases multiple embedded systems projects developed on the Texas Instruments TM4C123GXL (Tiva C Series LaunchPad) microcontroller using C and Code Composer Studio. Each project integrates timers, GPIO, LCD display, and audio feedback to create interactive real-time systems.
+This repository showcases multiple embedded systems projects developed on the **Texas Instruments TM4C123GXL (Tiva C Series LaunchPad)** using **C** and **Code Composer Studio**.  
+Each project integrates **timers**, **GPIO**, **LCD display**, and **audio feedback** to create interactive real-time systems.
 
- Simon Says Memory Game
- Overview
+---
 
-A memory-based game inspired by Simon Says, where the player must replicate increasingly long LED sequences. Audio tones and LCD feedback provide an interactive gaming experience.
+## 🧠 Projects Overview  
 
- Features
+<details>
+<summary><b>🎮 Simon Says Memory Game</b></summary>
 
-LED sequence generation and playback using SysTick and Timer1A
+A memory-based game inspired by *Simon Says*, where the player replicates increasingly long LED sequences. Audio tones and LCD feedback enhance interactivity.
 
-Audio tones for each LED via a 4-bit resistor DAC
+### ✨ Features
+- LED sequence generation using **SysTick** and **Timer1A**  
+- Audio tones via **4-bit resistor DAC**  
+- Correct/incorrect feedback with buzzer tones  
+- LCD messages: *“Round X Passed”* or *“Game Over”*  
+- Dynamic sequence-tracking logic using arrays and GPIO switch input  
 
-Correct/incorrect feedback using buzzer and “ding” tones
+### 🕹️ Example Workflow
+1. System flashes a sequence (e.g., Red → Green → Yellow).  
+2. Player repeats the sequence using switches.  
+3. Correct → next round with extended sequence.  
+4. Incorrect → buzzer + *“Game Over”* message.
 
-LCD messages: "Round X Passed" or "Game Over"
+</details>
 
-Dynamic sequence-tracking logic with arrays and GPIO switch validation
+---
 
-Example Workflow
+<details>
+<summary><b>⚡ LED Reaction Time Game</b></summary>
 
-System flashes an LED sequence (e.g., Red → Green → Yellow).
+A simple game that measures how quickly the player reacts to a randomly lit LED. Reaction times are displayed on the LCD in milliseconds.
 
-Player reproduces the sequence with the corresponding switches.
+### ✨ Features
+- Random LED activation with **SysTick**  
+- Reaction time measurement via **Timer1A**  
+- Switch-based user input detection  
+- LCD display: *“Reaction Time: XXX ms”*
 
-If correct, a new round begins with an extended sequence.
+### 🕹️ Example Workflow
+1. LED lights up after a random delay.  
+2. Player presses the switch as quickly as possible.  
+3. LCD displays the reaction time result.  
 
-If incorrect, the game ends with a buzzer sound and "Game Over" on the LCD.
+</details>
 
- LED Reaction Time Game
- Overview
+---
 
-The Reaction Time Game tests how fast a user responds to an LED turning on. Reaction times are measured in milliseconds and displayed on the LCD.
+<details>
+<summary><b>⏱️ Digital Stopwatch</b></summary>
 
-Features
+A digital stopwatch with start, stop, and reset controls, displaying elapsed time on the LCD in real time.
 
-Random LED activation with SysTick
+### ✨ Features
+- Controlled via **GPIO switches** (Start / Stop / Reset)  
+- Time tracking with **Timer1A** (HH:MM:SS format)  
+- Periodic tick sound via **SysTick + DAC**  
+- Dynamic LCD updates  
 
-Reaction time measurement using Timer1A
+### 🕹️ Example Workflow
+1. Press **Start** to begin timing.  
+2. Press **Stop** to pause.  
+3. Press **Reset** to clear to 00:00:00.  
 
-Switch-based user input detection
+</details>
 
-LCD result display: "Reaction Time: XXX ms"
+---
 
- Example Workflow
+## 🔩 Hardware Components  
 
-After a random delay, an LED lights up.
+| Component | Description |
+|------------|-------------|
+| **TM4C123GXL LaunchPad** | Main microcontroller board |
+| **ST7735 LCD** | SPI interface for text and graphics |
+| **4-bit Resistor DAC + Piezo Buzzer** | Generates audio tones |
+| **Onboard LEDs** | Red, Green, Yellow indicators |
+| **Push-button Switches** | Used for input and control |
 
-User presses the switch as quickly as possible.
+---
 
-The system calculates and displays the reaction time.
+## 🧰 Development Setup  
 
- Digital Stopwatch
- Overview
+**🧑‍💻 Tools Used**
+- **Language:** C  
+- **IDE:** Code Composer Studio  
+- **Debugger/Programmer:** Onboard ICDI  
 
-A digital stopwatch with start, stop, and reset controls. Displays the elapsed time on the LCD in HH:MM:SS format.
+**🚀 Getting Started**
+1. Clone this repository.  
+2. Open the project in Code Composer Studio.  
+3. Connect the TM4C123GXL via USB.  
+4. Build and flash the program.  
+5. Interact using the switches and LCD display.
 
- Features
+---
 
-Stopwatch controlled by GPIO switches (Start, Stop, Reset)
+## 🌟 Future Improvements  
 
-Time tracked by Timer1A with second-level granularity
+| Project | Planned Enhancements |
+|----------|----------------------|
+| **Simon Says** | Add difficulty scaling and high-score tracking |
+| **Reaction Game** | Support multiple rounds with average time scoring |
+| **Stopwatch** | Add lap-time tracking functionality |
 
-Tick sound generated with SysTick + DAC
+---
 
-LCD updates dynamically with the current stopwatch value
+## 🧾 License  
+This project is provided for educational and personal use.  
+See `LICENSE` for more information (if applicable).
 
- Example Workflow
+---
 
-Press Start to begin timing.
-
-Press Stop to pause.
-
-Press Reset to clear the stopwatch.
-
-LCD continuously updates with elapsed time.
-
-Hardware Components
-
-TM4C123GXL Tiva C Series LaunchPad
-
-ST7735 LCD (SPI interface)
-
-4-bit Resistor DAC + Piezo Buzzer (for audio tones)
-
-Onboard LEDs (red, green, yellow)
-
-Push-button switches (GPIO inputs)
- Digital Stopwatch
- Overview
-
-A stopwatch with manual control using GPIO switches, displayed in real-time on the LCD.
-
- Features
-
-Start, stop, and reset buttons via GPIO switches
-
-Time tracking with Timer1A (HH:MM:SS format)
-
-Periodic tick sound from SysTick + DAC
-
-Dynamic LCD updates
-
- Example Workflow
-
-Press Start to begin.
-
-Press Stop to pause.
-
-Press Reset to clear to 00:00:00.
-
- Development Tools
-
-Language: C
-
-IDE: Code Composer Studio
-
-Debugger/Programmer: Onboard ICDI
-
- Getting Started
-
-Clone the repository.
-
-Open the project in Code Composer Studio.
-
-Connect the TM4C123GXL via USB.
-
-Build and flash the program.
-
-Interact with the game/stopwatch using the switches and LCD.
-
- Future Improvements
-
-Simon Says: Add difficulty scaling and high-score tracking
-
-Reaction Game: Support multiple rounds with average time scoring
-
-Stopwatch: Add lap-time functionality
-
+🛠 Developed with passion using **Code Composer Studio** and the **TM4C123GXL Tiva C LaunchPad**.
