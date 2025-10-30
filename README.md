@@ -57,7 +57,7 @@ A digital stopwatch with start, stop, and reset controls, displaying elapsed tim
 ### ✨ Features
 - Controlled via **GPIO switches** (Start / Stop / Reset)  
 - Time tracking with **Timer1A** (HH:MM:SS format)  
-- Periodic tick sound via **SysTick + DAC**  
+- Periodic tick sound via **SysTick + DAC (4-bit binary weighted resistor DAC)**  
 - Dynamic LCD updates  
 
 ### 🕹️ Example Workflow
@@ -79,7 +79,7 @@ A real-time digital clock displayed on the ST7735 LCD, capable of showing time i
 - LCD display in **HH:MM:SS AM/PM** format  
 - Manual **time setting controls** via GPIO switches  
 - AM/PM toggle functionality  
-- Periodic tick sound using **DAC output**
+- Periodic tick sound using **DAC output via 4-bit binary weighted resistor DAC**
 
 ### 🕹️ Example Workflow
 1. Clock updates continuously every second.  
@@ -96,8 +96,8 @@ A real-time digital clock displayed on the ST7735 LCD, capable of showing time i
 |------------|-------------|
 | **TM4C123GXL LaunchPad** | Main microcontroller board |
 | **ST7735 LCD** | SPI interface for text and graphics |
-| **4-bit Resistor DAC + Piezo Buzzer** | Generates audio tones |
-| **Onboard LEDs** | Red, Green, Yellow indicators |
+| **4-bit Binary Weighted Resistor DAC + Speaker** | Generates audio tones |
+| **LEDs** | Red, Green, Yellow indicators |
 | **Push-button Switches** | Used for input and control |
 
 ---
